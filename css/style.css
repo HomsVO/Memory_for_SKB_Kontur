@@ -1,0 +1,420 @@
+body {
+  background: #1c6f2f;
+  font-family: Arial, sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+}
+.hiden{
+  display: none; /*Скрытие блока*/
+}
+div {
+  width:720px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+/*Начало*/
+.start-page{
+  margin: 80px auto 0 auto;
+  display: block;
+}
+.start-page__img{
+  height: 257px;
+}
+.start-page__title{
+  text-transform: uppercase;
+  color: #FFF;
+  opacity: 0.8;
+}
+.start-page__button{
+  padding:15px 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #1c6f2f;
+  opacity: 0.92;
+}
+/*Экран Игры*/
+.menu{
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  color: #fff;
+}
+#points{
+  font-size: 24px;
+  margin-right: 12px;
+}
+#return{
+  margin: auto 0 auto 12px;
+  text-decoration: none;
+  color: #fff;
+}
+
+/*Экран победителя*/
+#winer{
+  position: relative;
+}
+.winer-page__button{
+  position: absolute;
+  padding:15px 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #1c6f2f;
+  bottom: -65px;
+  right: 285px;
+  opacity: 0.92;
+}
+.winer-page__title{
+  font-size: 20px;
+  color: #fff;
+  opacity: 0.8;
+}
+/*Состояния карт и их стилизация*/
+[data-view="card"] {
+  transform: rotateY(180deg);
+  width: 100px;
+  height: 139px;
+  margin: 10px;
+  cursor: pointer;
+  background: url("../Cards/bg_card.png");
+  border-radius: 5px;
+}
+
+.flipped {
+  transition: 0.2s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(0deg);
+}
+
+.reverse {
+  transition: 0.2s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(180deg);
+}
+
+.correct {
+  transition: 0.8s;
+  opacity: 0.2;
+  cursor: default;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: translateX(-5000%);
+}
+
+/* Сами карты */
+.correct[data-item="1"],
+.flipped[data-item="1"] {
+  background: url("../Cards/0C.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="2"],
+.flipped[data-item="2"] {
+  background: url("../Cards/0D.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="3"],
+.flipped[data-item="3"] {
+  background: url("../Cards/0H.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="4"],
+.flipped[data-item="4"] {
+  background: url("../Cards/0S.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="5"],
+.flipped[data-item="5"] {
+  background: url("../Cards/2C.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="6"],
+.flipped[data-item="6"] {
+  background: url("../Cards/2D.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="7"],
+.flipped[data-item="7"] {
+  background: url("../Cards/2H.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="8"],
+.flipped[data-item="8"] {
+  background: url("../Cards/2S.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="9"],
+.flipped[data-item="9"] {
+  background: url("../Cards/3C.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="10"],
+.flipped[data-item="10"] {
+  background: url("../Cards/3D.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="11"],
+.flipped[data-item="11"] {
+  background: url("../Cards/3H.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="12"],
+.flipped[data-item="12"] {
+  background: url("../Cards/3S.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="13"],
+.flipped[data-item="13"] {
+  background: url("../Cards/4C.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="14"],
+.flipped[data-item="14"] {
+  background: url("../Cards/4D.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="15"],
+.flipped[data-item="15"] {
+  background: url("../Cards/4H.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="16"],
+.flipped[data-item="16"] {
+  background: url("../Cards/4S.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="17"],
+.flipped[data-item="17"] {
+  background: url("../Cards/5C.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="18"],
+.flipped[data-item="18"] {
+  background: url("../Cards/5D.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="19"],
+.flipped[data-item="19"] {
+  background: url("../Cards/5H.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="20"],
+.flipped[data-item="20"] {
+  background: url("../Cards/5S.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="21"],
+.flipped[data-item="21"] {
+  background: url("../Cards/6C.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="22"],
+.flipped[data-item="22"] {
+  background: url("../Cards/6D.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="23"],
+.flipped[data-item="23"] {
+  background: url("../Cards/6H.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="24"],
+.flipped[data-item="24"] {
+  background: url("../Cards/6S.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="25"],
+.flipped[data-item="25"] {
+  background: url("../Cards/7C.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="26"],
+.flipped[data-item="26"] {
+  background: url("../Cards/7D.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="27"],
+.flipped[data-item="27"] {
+  background: url("../Cards/7H.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="28"],
+.flipped[data-item="28"] {
+  background: url("../Cards/7S.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="29"],
+.flipped[data-item="29"] {
+  background: url("../Cards/8C.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="30"],
+.flipped[data-item="30"] {
+  background: url("../Cards/8D.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="31"],
+.flipped[data-item="31"] {
+  background: url("../Cards/8H.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="32"],
+.flipped[data-item="32"] {
+  background: url("../Cards/8C.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="33"],
+.flipped[data-item="33"] {
+  background: url("../Cards/9C.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="34"],
+.flipped[data-item="34"] {
+  background: url("../Cards/9D.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="35"],
+.flipped[data-item="35"] {
+  background: url("../Cards/9H.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="36"],
+.flipped[data-item="36"] {
+  background: url("../Cards/9S.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="37"],
+.flipped[data-item="37"] {
+  background: url("../Cards/AC.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="38"],
+.flipped[data-item="38"] {
+  background: url("../Cards/AD.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="39"],
+.flipped[data-item="39"] {
+  background: url("../Cards/AH.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="40"],
+.flipped[data-item="40"] {
+  background: url("../Cards/AS.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="41"],
+.flipped[data-item="41"] {
+  background: url("../Cards/JC.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="42"],
+.flipped[data-item="42"] {
+  background: url("../Cards/JD.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="43"],
+.flipped[data-item="43"] {
+  background: url("../Cards/JH.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="44"],
+.flipped[data-item="44"] {
+  background: url("../Cards/JS.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="45"],
+.flipped[data-item="45"] {
+  background: url("../Cards/KC.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="46"],
+.flipped[data-item="46"] {
+  background: url("../Cards/KD.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="47"],
+.flipped[data-item="47"] {
+  background: url("../Cards/KH.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="48"],
+.flipped[data-item="48"] {
+  background: url("../Cards/KS.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="49"],
+.flipped[data-item="49"] {
+  background: url("../Cards/QC.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="50"],
+.flipped[data-item="50"] {
+  background: url("../Cards/QD.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="51"],
+.flipped[data-item="51"] {
+  background: url("../Cards/QH.png") left center no-repeat;
+  background-size: contain;
+}
+
+.correct[data-item="52"],
+.flipped[data-item="52"] {
+  background: url("../Cards/QS.png") left center no-repeat;
+  background-size: contain;
+}
+

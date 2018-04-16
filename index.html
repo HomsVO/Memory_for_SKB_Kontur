@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Memory</title>
+      <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app" data-tid="App">
+  <!--Стартовая часть -->
+  <div id="start-page" class="start-page">
+    <img src="img/StartGame.png" alt="" class="start-page__img">
+    <h2 class="start-page__title">Memory Game</h2>
+    <a data-tid="NewGame-startGame" class="start-page__button" id='btn' href="#">Начать игру</a>
+  </div>
+ <!-- Игра -->
+  <div id="game" class="game hiden">
+    <div class="menu">
+      <a data-tid="Menu-newGame" href="#" id='return' >Начать заново</a>
+      <p id="points">Счет: <span data-tid="Menu-scores" id="counter">0</span></p>
+    </div>
+    <div data-tid="Deck" id="container" class="">
+    </div>
+  </div>
+   <!--Победитель!-->
+   <div id="winer" class="hiden">
+      <img src="img/Group_2.png" alt="" class="start-page__img">
+      <h2 class="winer-page__title">Поздравляем! <br> Ваш итоговый счет: <span id="win_score"></span></h2>
+      <a data-tid="NewGame-startGame" id="returnAfterWin" data-tid="EndGame-retryGame"  class="winer-page__button" href="#">Еще раз</a>
+   </div>
+</div>
+  <script  src="js/index2.js"></script>
+</body>
+
+</html>
